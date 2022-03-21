@@ -23,7 +23,7 @@
           <input type="checkbox" value="remember-me"> Lembrar de mim
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+      <a href="admin/index.php" class="btn btn-lg btn-primary btn-block" >Entrar</a>
       <p class="mt-5 mb-3 text-muted">&copy;2022-2022  <br>IPAG  Todos direitos reservados. </p>
     </form>
   </body>
