@@ -25,7 +25,6 @@
         
       </div>
     </div>
-
-    <?php require('components/menuesquerdo.php')?>
+    <?php require('components/rodape.php')?>
   </body>
   </html>

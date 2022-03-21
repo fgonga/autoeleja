@@ -2,38 +2,28 @@
     <li class="nav-item">
       <a class="nav-link active" href="/admin">
         <span data-feather="home"></span>
-        Inicio <span class="sr-only">(current)</span>
+        Processos <span class="sr-only">(current)</span>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/admin/clientes.php">
         <span data-feather="bar-chart-2"></span>
-        Clientes
+        Candidatos
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/admin/encomendas.php">
         <span data-feather="users"></span>
-        Encomendas
+        Eleitores
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/admin/produtos.php">
         <span data-feather="file"></span>
-        Produtos
+        Definicoes
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/admin/categorias.php">
-        <span data-feather="shopping-cart"></span>
-        Categorias
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/admin/relatorios.php">
-        <span data-feather="shopping-cart"></span>
-        Relatorios
-      </a>
+
     </li>
  
   </ul>

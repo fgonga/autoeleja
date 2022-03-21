@@ -17,7 +17,7 @@
 						<a class="nav-link " href="sobre.php">Sobre</a>
 					</li>
 					<li class="nav-item my-auto">
-						<a class="btn  btn-sm btn-outline-primary" href="#">Entrar</a>
+						<a class="btn  btn-sm btn-outline-primary" href="/entrar.php">Entrar</a>
 					</li>
 				</ul>
 				

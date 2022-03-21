@@ -2,7 +2,7 @@
   <html lang="en">
   <head>
     
-    <title>Dashboard Template for Bootstrap</title>
+    <title>AutoEleja</title>
     <?php require('components/cabecalho.php')?>
   </head>
 

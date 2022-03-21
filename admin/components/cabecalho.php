@@ -5,7 +5,7 @@
     
 
     <!-- Bootstrap core CSS -->
-    <link href="/publico/css/bootstrap4.css" rel="stylesheet">
+    <link href="/publico/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/publico/css/admin.css" rel="stylesheet">
