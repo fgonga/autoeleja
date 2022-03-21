@@ -1,5 +1,5 @@
 <footer class="container text-center">
-	<p>&copy; Projecto de fim de curso IPAG - Grupo 5 -  2022</p>
+	<p>&copy; Projecto de fim de curso IPAG   2022</p>
 </footer>
 <script src="/publico/js/jquery-slim.min.js"></script>
 <script src="/publico/js/popper.min.js"></script>
