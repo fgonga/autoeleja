@@ -31,11 +31,11 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Novo processo de votação</h4>
+                    <h4 class="page-title">Novo candidato</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Processos</a></li>
+                                <li class="breadcrumb-item"><a href="#">Candidatos</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Novo </li>
                             </ol>
                         </nav>
@@ -49,67 +49,58 @@
                 <div class="card">
                     <form class="form-horizontal" method="POST" action="/app/controlador/processos/novo.php">
                         <div class="card-body">
-                            <h5 class="card-title">Informações do processo</h5>
+                            <h5 class="card-title">Informações do candidato</h5>
                             <hr>
                             <div class="row">
                                 <div class="form-group col-md-3">
-                                    <label for="fname" class="">Nome</label>
+                                    <label for="fname" class="">BI</label>
 
-                                    <input type="text" class="form-control" id="fname" placeholder="Nome">
+                                    <div class="input-group">
+
+                                        <input type="text" class="form-control" placeholder="Bilhete de identidade" aria-label="Username" aria-describedby="basic-addon1">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="lname" class="">Foto</label>
+                                    <input type="file" class="form-control">
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label for="fname" class="">Inicio</label>
-
-                                    <input type="date" class="form-control" id="fname" placeholder="First Name Here">
+                                    <label for="lname" class="">Residencia</label>
+                                    <input type="text" class="form-control">
                                 </div>
-
                                 <div class="form-group col-md-3">
-                                    <label for="lname" class="">Fim</label>
-
-                                    <input type="date" class="form-control" id="lname" placeholder="Last Name Here">
-                                </div>
-
-                                <div class="form-group col-md-3">
-                                    <label for="lname" class="">Província</label>
-
-
+                                    <label for="lname" class="">Género</label>
                                     <select name="" id="" class="form-control">
-                                        <option value=""></option>
+                                        <option value="">Masculino</option>
+                                        <option value="">Feminino</option>
                                     </select>
                                 </div>
-
                                 <div class="form-group col-md-3">
-                                    <label for="email1" class="">Município</label>
+                                    <label for="lname" class="">Estado civil</label>
                                     <select name="" id="" class="form-control">
-                                        <option value=""></option>
+                                        <option value="">Solteiro</option>
+                                        <option value="">Casado</option>
                                     </select>
-
                                 </div>
-                                <div class="col-md-12">
-                                    <h5>Candidatos que vão concorrer</h5>
-                                    <hr>
-                                    <table class="table  table-sm table-striped table-bordered">
-                                        <thead>
-                                        <tr class="bg-default">
-                                            <th>#</th>
-                                            <th>Id</th>
-                                            <th>Nome</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td><input type="checkbox" class="form-control"></td>
-                                            <td>1</td>
-                                            <td>Tainara Mita</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" class="form-control"></td>
-                                            <td>2</td>
-                                            <td>Tarcio Rebelo</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="form-group col-md-3">
+                                    <label for="lname" class="">Data de nascimento</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="lname" class="">Pai</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="lname" class="">Mae</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="lname" class="">Proposta</label>
+                                    <textarea class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="border-top">

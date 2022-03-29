@@ -14,14 +14,14 @@
             <b class="logo-icon p-l-10">
               <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
               <!-- Dark Logo icon -->
-              <img src="/publico/assets/images/logo-icon.png" alt="homepage" class="light-logo" />
+              <h3>AutoEleja</h3>
               
             </b>
             <!--End Logo icon -->
             <!-- Logo text -->
             <span class="logo-text">
              <!-- dark Logo text -->
-             <img src="/publico/assets/images/logo-text.png" alt="homepage" class="light-logo" />
+
              
            </span>
            <!-- Logo icon -->
@@ -53,17 +53,7 @@
             <!-- ============================================================== -->
             <!-- create new -->
             <!-- ============================================================== -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <span class="d-none d-md-block">Create New <i class="fa fa-angle-down"></i></span>
-               <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>   
-             </a>
-             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+
           </li>
           <!-- ============================================================== -->
           <!-- Search -->

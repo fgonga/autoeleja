@@ -58,7 +58,7 @@
     </div>
     <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Quer escolher outro município?</h1>
+            <h1 class="jumbotron-heading">Local para visualizar resultado</h1>
             <div class="form-group d-flex ">
                 <select name="" id="" class="form-control mr-2">
                     <option value="#" disabled >Província</option>
@@ -105,20 +105,17 @@
     <div class="album py-5 bg-light">
         <div class="container">
 
-            <h3 class="text-center">Escolha o seu candidado </h3>
+            <h3 class="text-left">Eleições 2022 Benguela/Lobito </h3>
             <hr>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-left">
                 <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
+                    <div class="card bg-warning mb-4 box-shadow">
                         <img class="card-img-top" height="300" src="/publico/candidato2.png" data-src="/publico/candidato2.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">Lutar pelos direitos das mulheres, igualdade de género proporcionando um ambiente de equidade..</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary "  data-toggle="modal" data-target="#exampleModal">Votar</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Visualizar proposta </button>
-                                </div>
-                                <small class="text-muted">2 voto/s</small>
+                                <button class="btn btn-primary">Vencedor</button>
+
                             </div>
                         </div>
                     </div>
@@ -129,11 +126,8 @@
                         <div class="card-body">
                             <p class="card-text">Combater a corrupção na provincia , apostando na educação e saúde para promoção de um ambiente propero.</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Votar</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Visualizar proposta</button>
-                                </div>
-                                <small class="text-muted">1 voto/s</small>
+                                <button class="btn btn-default">2 Classificado</button>
+
                             </div>
                         </div>
                     </div>

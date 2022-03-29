@@ -8,13 +8,13 @@
 			<div class="collapse navbar-collapse  " id="navbarCollapse">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="/index.php">Inicio <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Candidatos</a>
+						<a class="nav-link" href="/resultados.php">Resultados</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link " href="sobre.php">Sobre</a>
+						<a class="nav-link " href="/sobre.php">Sobre</a>
 					</li>
 					<li class="nav-item my-auto">
 						<a class="btn  btn-sm btn-outline-primary" href="/app/visao/entrar.php">Entrar</a>
