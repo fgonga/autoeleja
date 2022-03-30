@@ -7,7 +7,6 @@
 		<meta name="author" content="IPAG">
 		<title>SOBRE</title>
 		<link href="./publico/css/bootstrap.min.css" rel="stylesheet">
-		
 
 	</head>
 

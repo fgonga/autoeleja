@@ -115,7 +115,7 @@
                                     <button type="button" class="btn btn-sm btn-outline-secondary "  data-toggle="modal" data-target="#exampleModal">Votar</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Visualizar proposta </button>
                                 </div>
-                                <small class="text-muted">2 voto/s</small>
+                              
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Votar</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Visualizar proposta</button>
                                 </div>
-                                <small class="text-muted">1 voto/s</small>
+                               
                             </div>
                         </div>
                     </div>
