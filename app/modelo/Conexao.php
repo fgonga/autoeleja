@@ -6,6 +6,6 @@ $password = '';
 $db = 'autoeleja';
 
 $conexao  = @mysqli_connect ($host, $user, $password, $db);
-if(!$conexao){
-	echo "Erro ao conectar a base de dados";
+if (mysqli_connect_error()) {
+	die(mysqli_connect_error());
 }

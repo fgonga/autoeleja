@@ -12,7 +12,7 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin" method="POST" action="/app/controlador/utilisador/entrar.php">
+    <form class="form-signin" method="POST" action="/app/controlador/utilizador/entrar.php">
       <img class="mb-4"  alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">AutoEleja</h1>
       <?php if (@$_GET['alerta'] == "nao") {echo '<div class="alert alert-danger">Nome ou senha incorrecto.</div>'; }?>

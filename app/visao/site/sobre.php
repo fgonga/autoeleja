@@ -6,13 +6,13 @@
 		<meta name="description" content="">
 		<meta name="author" content="IPAG">
 		<title>SOBRE</title>
-		<link href="./publico/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/publico/css/bootstrap.min.css" rel="stylesheet">
 
 	</head>
 
 	<body>
 		<?php require_once("components/menu.php"); ?>
-		
+
 		<main role="main">
 
 			<!-- Main jumbotron for a primary marketing message or call to action -->
@@ -29,7 +29,7 @@
 				<hr>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nobis qui beatae eveniet, quibusdam at, quos molestiae vitae nesciunt perferendis quae iste recusandae suscipit libero autem nam numquam commodi reiciendis officiis.</p>
 				<!-- Example row of columns -->
-				
+
 				<h4 class="my-0 py-0">Como funciona?</h4>
 				<hr>
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, commodi possimus, alias repudiandae nam delectus exercitationem optio sunt molestiae omnis, eius veritatis modi illum iusto laboriosam corrupti id libero nisi.</p>
@@ -41,7 +41,7 @@
 							<img height="300" class="card-img-top" data-src="/publico/img/3.png" src="/publico/img/3.png" alt="Card image cap">
 							<div class="card-body">
 								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								
+
 							</div>
 						</div>
 					</div>
@@ -50,7 +50,7 @@
 							<img height="300" class="card-img-top" data-src="/publico/img/4.png" src="/publico/img/4.png" alt="Card image cap">
 							<div class="card-body">
 								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								
+
 							</div>
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 							<img height="300" class="card-img-top" data-src="/publico/img/5.png" src="/publico/img/5.png" alt="Card image cap">
 							<div class="card-body">
 								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								
+
 							</div>
 						</div>
 					</div>
@@ -68,7 +68,7 @@
 							<img height="300" class="card-img-top" data-src="/publico/img/6.png" src="/publico/img/6.png" alt="Card image cap">
 							<div class="card-body">
 								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								
+
 							</div>
 						</div>
 					</div>
@@ -77,12 +77,12 @@
 							<img   height="300" class="card-img-top" data-src="/publico/img/7.jpg" src="/publico/img/7.jpg" alt="Card image cap">
 							<div class="card-body">
 								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								
+
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 
 			<hr>
@@ -91,7 +91,7 @@
 
 	</main>
 	<?php require_once("components/rodape.php"); ?>
-	
+
 	<script src="/publico/js/jquery-slim.min.js"></script>
 	<script src="/publico/js/popper.min.js"></script>
 	<script src="/publico/js/bootstrap.min.js"></script>

@@ -1,3 +1,4 @@
+<?php require_once("../../controlador/resumo/index.php")?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -8,26 +9,18 @@
 </head>
 
 <body>
-  <!-- ============================================================== -->
-  <!-- Preloader - style you can find in spinners.css -->
-  <!-- ============================================================== -->
-  <div class="preloader">
-    <div class="lds-ripple">
-      <div class="lds-pos"></div>
-      <div class="lds-pos"></div>
-    </div>
-  </div>
+
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
   <!-- ============================================================== -->
   <div id="main-wrapper">
 
- 
+
     <?php require_once("components/menuesquerdo.php")?>
     <?php require_once("components/menusuperior.php")?>
-  
+
     <div class="page-wrapper">
-      
+
       <div class="page-breadcrumb">
         <div class="row">
           <div class="col-12 d-flex no-block align-items-center">
@@ -43,7 +36,7 @@
           </div>
         </div>
       </div>
-     
+
       <div class="container-fluid">
 <div class="container-fluid">
           <!-- ============================================================== -->
@@ -132,45 +125,39 @@
                         <div class="col-6">
                           <div class="bg-dark p-10 text-white text-center">
                             <i class="mdi mdi-account fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">2</h5>
-                            <small class="font-light">Total candiatos</small>
+                            <h5 class="mb-0 mt-1"><?php echo $tc;?></h5>
+                            <small class="font-light">Total candidatos</small>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="bg-dark p-10 text-white text-center">
                             <i class="mdi mdi-plus fs-3 font-16"></i>
-                            <h5 class="mb-0 mt-1">3</h5>
+                            <h5 class="mb-0 mt-1"><?php echo $te;?></h5>
                             <small class="font-light">Total de eleitores</small>
                           </div>
                         </div>
                         <div class="col-6 mt-3">
                           <div class="bg-dark p-10 text-white text-center">
                             <i class="mdi mdi-cart fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">1</h5>
+                            <h5 class="mb-0 mt-1"><?php echo $tp;?></h5>
                             <small class="font-light">Total processos</small>
                           </div>
                         </div>
                         <div class="col-6 mt-3">
                           <div class="bg-dark p-10 text-white text-center">
                             <i class="mdi mdi-tag fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">3</h5>
+                            <h5 class="mb-0 mt-1"><?php echo $tv;?></h5>
                             <small class="font-light">Total votos</small>
                           </div>
                         </div>
                         <div class="col-6 mt-3">
                           <div class="bg-dark p-10 text-white text-center">
                             <i class="mdi mdi-table fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">1</h5>
+                            <h5 class="mb-0 mt-1"><?php echo $tu;?></h5>
                             <small class="font-light">Total utilizadores</small>
                           </div>
                         </div>
-                        <div class="col-6 mt-3">
-                          <div class="bg-dark p-10 text-white text-center">
-                            <i class="mdi mdi-web fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">100</h5>
-                            <small class="font-light">Total de visitas</small>
-                          </div>
-                        </div>
+
                       </div>
                     </div>
                     <!-- column -->

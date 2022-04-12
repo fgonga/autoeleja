@@ -30,12 +30,8 @@
                         <li class="sidebar-item"><a href="/app/visao/admin/eleitores/lista.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Lista de eleitores </span></a></li>
                     </ul>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Utilizadores </span></a>
-                    <ul aria-expanded="false" class="collapse  first-level">
-                        <li class="sidebar-item"><a href="/app/visao/admin/eleitores/novo.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Novo utilizador </span></a></li>
-                        <li class="sidebar-item"><a href="/app/visao/admin/eleitores/lista.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Lista de utilizadores </span></a></li>
-                    </ul>
-                </li>
+
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/app/visao/admin/utilizador/unico.php" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Utilizador</span></a></li>
 
 
 

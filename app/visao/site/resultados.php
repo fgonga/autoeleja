@@ -7,7 +7,7 @@
     <meta name="author" content="IPAG">
     <title>INICIO</title>
     <!-- Bootstrap core CSS -->
-    <link href="./publico/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/publico/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/publico/css/album.css" rel="stylesheet">
