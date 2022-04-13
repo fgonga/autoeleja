@@ -4,7 +4,7 @@
 
 <head>
     <?php require_once("../components/cabecalho.php")?>
-    <title>AutoEleja</title>
+    <title>AutaEleja</title>
 </head>
 
 <body>
@@ -76,7 +76,7 @@
                                 <label for="tipo">Tipo</label>
                                 <select  required name="tipo" id="tipo" class="form-control">
                                     <option value="a">Administrador</option>
-                                    <option value="b">Balconista</option>
+                                    <option value="b">Brigadista</option>
                                 </select>
                             </div>
                             <div class="form-groud col-12 mt-2">
@@ -104,9 +104,8 @@
                                   <tr>
                                       <td><?php echo $utilizador["id"];?></td>
                                       <td><?php echo $utilizador["nome"];?></td>
-                                      <td><?php echo $utilizador["tipo"]?></td>
+                                      <td><?php echo $utilizador["tipo"] == "a"? "Administrador":"Brigadista" ?></td>
                                       <td>
-
                                           <a href="/app/controlador/utilizador/eliminar.php?id=<?php echo $utilizador['id']?>" class="btn btn-danger btn-xs">
                                               <i class="fa fa-trash"></i> Eliminar
                                           </a>

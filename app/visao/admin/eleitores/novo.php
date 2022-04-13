@@ -3,7 +3,7 @@
 
 <head>
     <?php require_once("../components/cabecalho.php")?>
-    <title>AutoEleja</title>
+    <title>AutaEleja</title>
 
 </head>
 

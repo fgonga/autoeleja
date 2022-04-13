@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>AutoEleja | Entrar</title>
+    <title>AutaEleja | Entrar</title>
     <link href="/publico/css/bootstrap.css" rel="stylesheet"/>
     <link href="/publico/css/entrar.css" rel="stylesheet"/>
   </head>
@@ -14,7 +14,7 @@
   <body class="text-center">
     <form class="form-signin" method="POST" action="/app/controlador/utilizador/entrar.php">
       <img class="mb-4"  alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">AutoEleja</h1>
+      <h1 class="h3 mb-3 font-weight-normal">AutaEleja</h1>
       <?php if (@$_GET['alerta'] == "nao") {echo '<div class="alert alert-danger">Nome ou senha incorrecto.</div>'; }?>
       <label for="inputEmail" class="sr-only">Email </label>
       <input type="text" name="nome" id="inputEmail" class="form-control" placeholder="Nome"  autofocus>

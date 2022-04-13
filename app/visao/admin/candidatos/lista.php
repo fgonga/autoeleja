@@ -1,4 +1,4 @@
- 
+
 
 <?php require_once("../../../controlador/candidato/listar.php")?>
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 
 <head>
     <?php require_once("../components/cabecalho.php")?>
-    <title>AutoEleja</title>
+    <title>AutaEleja</title>
 
 </head>
 
@@ -50,20 +50,20 @@
             <div class="container-fluid">
                 <div class="col-md-12">
                     <div class="card p-4">
-                        <?php 
+                        <?php
                         $mensagem = $_GET['mensagem'];
                         if ($_GET['erro'] == 'nao') {
                             echo "
                             <div class='alert alert-success' role='alert'>
-                            $mensagem 
+                            $mensagem
                             </div>";
                         }elseif($_GET['erro'] == 'sim'){
                            echo "
                            <div class='alert alert-danger' role='alert'>
-                           $mensagem 
+                           $mensagem
                            </div>";
                        }
-                       
+
                        ?>
                        <input type="text" class="form-control mb-2" placeholder="Pesquisar candidato">
                        <table class="table table-bordered">
@@ -87,7 +87,7 @@
                                       <td><?php echo $candidato["genero"]?></td>
                                       <td><?php echo $candidato["nascimento"]?></td>
                                       <td><?php echo $candidato["telefone"]?></td>
-                                      
+
                                       <td>
                                           <button class="btn btn-primary btn-sm">
                                               <i class="fa fa-edit"></i> Editar
@@ -96,7 +96,7 @@
                                               <i class="fa fa-trash"></i> Eliminar
                                           </a>
                                       </td>
-                                  </tr> 
+                                  </tr>
                               <?php endwhile;?>
 
                           </tbody>

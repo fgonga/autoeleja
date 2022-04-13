@@ -3,7 +3,7 @@
 
 <head>
     <?php require_once("../components/cabecalho.php")?>
-    <title>AutoEleja</title>
+    <title>AutaEleja</title>
 
 </head>
 
@@ -51,20 +51,20 @@
                             <div class="card-body">
                                 <h5 class="card-title">Informações do candidato</h5>
                                 <hr>
-                                <?php 
+                                <?php
                                 $mensagem = $_GET['mensagem'];
                                 if ($_GET['erro'] == 'nao') {
                                     echo "
                                     <div class='alert alert-success' role='alert'>
-                                    $mensagem 
+                                    $mensagem
                                     </div>";
                                 }elseif($_GET['erro'] == 'sim'){
                                  echo "
                                  <div class='alert alert-danger' role='alert'>
-                                 $mensagem 
+                                 $mensagem
                                  </div>";
                              }
-                             
+
                              ?>
                              <div class="row">
                                 <div class="form-group col-md-3">
@@ -82,12 +82,12 @@
                                     <label for="nome"  class="">Nome</label>
                                     <input type="text" id="nome" name="nome" class="form-control">
                                 </div>
-                                
+
                                 <div class="form-group col-md-3">
                                     <label for="telefone"  class="">Telefone</label>
                                     <input type="number" id="telefone" name="telefone" class="form-control">
                                 </div>
-                                
+
                                 <div class="form-group col-md-3">
                                     <label for="foto" class="">Foto</label>
                                     <input type="file" name="foto" id="foto" class="form-control">
@@ -127,7 +127,7 @@
                                   <option value="Lobito">Lobito</option>
                               </select>
                           </div>
-                          
+
                           <div class="form-group col-md-3">
                             <label for="pai" class="">Pai</label>
                             <input type="text" name="pai" class="form-control">
@@ -136,7 +136,7 @@
                             <label for="mae" class="">Mae</label>
                             <input type="text" name="mae" class="form-control">
                         </div>
-                        
+
                     </div>
                     <div class="border-top">
                         <div class="card-body">

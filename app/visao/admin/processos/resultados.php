@@ -1,10 +1,11 @@
-
+<?php require_once("../../../controlador/processo/listar.php")?>
+<?php require_once("../../../controlador/processo/resultados.php")?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
 <head>
     <?php require_once("../components/cabecalho.php")?>
-    <title>AutoEleja</title>
+    <title>AutaEleja</title>
 
 </head>
 
@@ -43,16 +44,18 @@
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="card p-4">
-                    <h6>Selecione candidato</h6>
-                    <div class="row">
-                        <div class="form-group col-md-3">
-
-
-                            <select name="" class="form-control" id="">
-                                <option value="">Eleições 2022 Benguela/Lobito</option>
-                            </select>
+                    <h6>Selecione processo</h6>
+                    <form action="" onchange="this.submit()">
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <select name="id" class="form-control" >
+                                    <?php while($processo = mysqli_fetch_array($processos)):?>
+                                        <option <?php echo $processo["id"] == $_GET["id"] ? "selected":""; ?> value="<?php echo $processo["id"]?>"><?php echo $processo["nome"]?></option>
+                                    <?php endwhile;?>
+                                </select>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <input type="text" class="form-control mb-2" placeholder="Pesquisar processo">
                     <table class="table table-bordered">
                         <thead>

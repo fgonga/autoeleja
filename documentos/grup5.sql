@@ -13,12 +13,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Copiando estrutura do banco de dados para autoeleja
-DROP DATABASE IF EXISTS `autoeleja`;
-CREATE DATABASE IF NOT EXISTS `autoeleja` /*!40100 DEFAULT CHARACTER SET utf16 */;
-USE `autoeleja`;
+-- Copiando estrutura do banco de dados para AutaEleja
+DROP DATABASE IF EXISTS `AutaEleja`;
+CREATE DATABASE IF NOT EXISTS `AutaEleja` /*!40100 DEFAULT CHARACTER SET utf16 */;
+USE `AutaEleja`;
 
--- Copiando estrutura para tabela autoeleja.candidato_no_processo
+-- Copiando estrutura para tabela AutaEleja.candidato_no_processo
 DROP TABLE IF EXISTS `candidato_no_processo`;
 CREATE TABLE IF NOT EXISTS `candidato_no_processo` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -32,12 +32,12 @@ CREATE TABLE IF NOT EXISTS `candidato_no_processo` (
   CONSTRAINT `candidato_no_processo_processo_id_foreign` FOREIGN KEY (`processo_id`) REFERENCES `processo` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela autoeleja.candidato_no_processo: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela AutaEleja.candidato_no_processo: ~0 rows (aproximadamente)
 DELETE FROM `candidato_no_processo`;
 /*!40000 ALTER TABLE `candidato_no_processo` DISABLE KEYS */;
 /*!40000 ALTER TABLE `candidato_no_processo` ENABLE KEYS */;
 
--- Copiando estrutura para tabela autoeleja.pessoa
+-- Copiando estrutura para tabela AutaEleja.pessoa
 DROP TABLE IF EXISTS `pessoa`;
 CREATE TABLE IF NOT EXISTS `pessoa` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -54,12 +54,12 @@ CREATE TABLE IF NOT EXISTS `pessoa` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela autoeleja.pessoa: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela AutaEleja.pessoa: ~0 rows (aproximadamente)
 DELETE FROM `pessoa`;
 /*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
 
--- Copiando estrutura para tabela autoeleja.processo
+-- Copiando estrutura para tabela AutaEleja.processo
 DROP TABLE IF EXISTS `processo`;
 CREATE TABLE IF NOT EXISTS `processo` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -71,12 +71,12 @@ CREATE TABLE IF NOT EXISTS `processo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela autoeleja.processo: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela AutaEleja.processo: ~0 rows (aproximadamente)
 DELETE FROM `processo`;
 /*!40000 ALTER TABLE `processo` DISABLE KEYS */;
 /*!40000 ALTER TABLE `processo` ENABLE KEYS */;
 
--- Copiando estrutura para tabela autoeleja.utilizador
+-- Copiando estrutura para tabela AutaEleja.utilizador
 DROP TABLE IF EXISTS `utilizador`;
 CREATE TABLE IF NOT EXISTS `utilizador` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -86,12 +86,12 @@ CREATE TABLE IF NOT EXISTS `utilizador` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela autoeleja.utilizador: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela AutaEleja.utilizador: ~0 rows (aproximadamente)
 DELETE FROM `utilizador`;
 /*!40000 ALTER TABLE `utilizador` DISABLE KEYS */;
 /*!40000 ALTER TABLE `utilizador` ENABLE KEYS */;
 
--- Copiando estrutura para tabela autoeleja.voto
+-- Copiando estrutura para tabela AutaEleja.voto
 DROP TABLE IF EXISTS `voto`;
 CREATE TABLE IF NOT EXISTS `voto` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `voto` (
   CONSTRAINT `voto_processo_id_foreign` FOREIGN KEY (`processo_id`) REFERENCES `processo` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela autoeleja.voto: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela AutaEleja.voto: ~0 rows (aproximadamente)
 DELETE FROM `voto`;
 /*!40000 ALTER TABLE `voto` DISABLE KEYS */;
 /*!40000 ALTER TABLE `voto` ENABLE KEYS */;

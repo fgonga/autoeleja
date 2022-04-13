@@ -5,7 +5,7 @@
 
 <head>
     <?php require_once("../components/cabecalho.php")?>
-    <title>AutoEleja</title>
+    <title>AutaEleja</title>
 
 </head>
 
@@ -97,10 +97,10 @@
                                                   <tr>
                                                     <td class="col-1">
                                                         <input type="hidden" name="candidato[<?php echo $candidato['id'];?>][id]" value="<?php echo $candidato['id'];?>">
-                                                        
+
                                                         <div class="custom-control custom-checkbox mr-sm-2">
                                                           <input type="checkbox" id="candidato_<?php echo $candidato['id'];?>" name="candidato[<?php echo $candidato['id'];?>][select]" class="custom-control-input" value='1'>
-                                                          
+
                                                           <label class="custom-control-label" for="candidato_<?php echo $candidato['id'];?>"></label>
                                                       </div>
                                                   </td>
@@ -108,14 +108,14 @@
                                                   <td><?php echo $candidato["bi"]?></td>
                                                   <td><?php echo $candidato["nome"];?></td>
                                                   <td>
-                                                    
+
                                                     <textarea class="form-control" name="candidato[<?php echo $candidato['id'];?>][proposta]" placeholder="Proposta eleitoral" name="" id="" cols="30" rows="1"></textarea>
                                                 </td>
-                                                
-                                                
-                                            </tr> 
+
+
+                                            </tr>
                                         <?php endwhile;?>
-                                        
+
                                     </tbody>
                                 </table>
                             </div>

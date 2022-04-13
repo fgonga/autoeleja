@@ -1,10 +1,10 @@
-
+<?php require_once("../../../controlador/processo/listar.php")?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
 <head>
     <?php require_once("../components/cabecalho.php")?>
-    <title>AutoEleja</title>
+    <title>AutaEleja</title>
 
 </head>
 
@@ -53,24 +53,25 @@
                             <th scope="col" class="text-white">Fim</th>
                             <th scope="col" class="text-white">Província</th>
                             <th scope="col" class="text-white">Município</th>
-                            <th scope="col" class="text-white">Estado</th>
+
                             <th scope="col" class="text-white">Ações</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Eleições 2022 Benguela/Lobito</td>
-                            <td>29/03/2022</td>
-                            <td>30/03/2022</td>
-                            <td>Benguela</td>
-                            <td>Lobito</td>
-                            <td><label for="" class="badge badge-primary">Normal</label>
+                        <?php while($processo = mysqli_fetch_array($processos)):?>
+                            <tr>
+                                <td ><?php echo $processo["id"];?></td>
+                                <td ><?php echo $processo["nome"];?></td>
+                                <td ><?php echo $processo["inicio"];?></td>
+                                <td ><?php echo $processo["fim"];?></td>
+                                <td ><?php echo $processo["provincia"];?></td>
+                                <td ><?php echo $processo["municipio"];?></td>
 
 
-                            </td>
-                            <td>  <a href="" class="btn btn-default btn-sm"> <i class="fa fa-eye"> </i> Resultados</a></td>
-                        </tr>
+                                <td> <a href="/app/visao/admin/processos/resultados.php?id=<?php echo $processo['id']?>" class="btn btn-default btn-sm"> <i class="fa fa-eye"> </i> Resultados</a></td>
+                            </tr>
+                        <?php endwhile;?>
+
 
                         </tbody>
                     </table>
