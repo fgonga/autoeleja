@@ -7,4 +7,8 @@ function consultar_bi(string $bi){
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     return json_decode(curl_exec($ch),true);
 }
-consultar_bi("005898971BA042");
+
+$bi = $_GET['bi'];
+if(!empty($bi)){
+    return consultar_bi($bi);
+}
