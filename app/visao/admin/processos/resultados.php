@@ -60,29 +60,24 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr class="bg-primary">
-                            <th scope="col" class="text-white">Id</th>
+
                             <th scope="col" class="text-white">Nome</th>
                             <th scope="col" class="text-white">Votos</th>
                             <th scope="col" class="text-white">Posição</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Tainara Mita</td>
-                            <td>2</td>
-                            <td><label for="" class="badge badge-primary">1 - Lugar</label>
-                            </td>
+                        <?php foreach ($candidatos as $index => $candidato):?>
+                            <tr>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Tarcio Rebelo</td>
-                            <td>1</td>
-                            <td><label for="" class="badge badge-secondary">2 - Lugar</label>
-                            </td>
+                                <td><?php echo $candidato["nome"];?></td>
+                                <td><?php echo $candidato["votos"];?></td>
 
-                        </tr>
+                                <td><label for="" class="badge <?php echo $bads[$index];?> "><?php echo $index+1;?> - Lugar</label>
+                                </td>
+
+                            </tr>
+                        <?php endforeach;?>
                         </tbody>
                     </table>
 
