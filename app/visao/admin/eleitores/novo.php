@@ -53,13 +53,13 @@
                             <hr>
                             <div id="mensagem">
                                 <?php
-                                $mensagem = $_GET['mensagem'];
-                                if ($_GET['erro'] == 'nao') {
+                                @$mensagem = $_GET['mensagem'];
+                                if (@$_GET['erro'] == 'nao') {
                                     echo "
                                     <div class='alert alert-success' role='alert'>
                                     $mensagem
                                     </div>";
-                                }elseif($_GET['erro'] == 'sim'){
+                                }elseif(@$_GET['erro'] == 'sim'){
                                     echo "
                                  <div class='alert alert-danger' role='alert'>
                                  $mensagem
@@ -76,7 +76,10 @@
                                     <div class="input-group">
                                         <input type="text" name="bi" id="bi" class="form-control " placeholder="Bilhete de identidade" aria-label="Username" aria-describedby="basic-addon1">
                                         <div class="input-group-prepend">
-                                            <span  class="input-group-text btn procurar_bi" title="Buscar informações" id="basic-addon1"><i class="fa fa-search"></i></span>
+                                            <span  class="input-group-text btn procurar_bi" title="Buscar informações" id="basic-addon1">
+                                                <div class="loader bi_loader" role="status"></div>
+                                                <i class="fa fa-search bi_icon"></i>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +92,7 @@
                                             <span class="input-group-text btn enviar_codigo" id="basic-addon1"><i class="fa fa-paper-plane fa-fw"></i> Enviar</span>
                                         </div>
                                     </div>
-codigo
+
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="fname" class="">Código de aprovação</label>
@@ -98,13 +101,6 @@ codigo
                                 <div class="form-group col-md-3">
                                     <label for="nome"  class="">Nome</label>
                                     <input type="text" id="nome" name="nome" class="form-control">
-                                </div>
-
-
-
-                                <div class="form-group col-md-3">
-                                    <label for="foto" class="">Foto</label>
-                                    <input type="file" name="foto" id="foto" class="form-control">
                                 </div>
 
                                 <div class="form-group col-md-3">
@@ -122,19 +118,22 @@ codigo
                                     <label for="estado_civil" >Estado civil</label>
                                     <select name="estado_civil" id="estado_civil" class="form-control">
                                         <option value="Solteiro" selected>Solteiro</option>
+                                        <option value="Solteira">Solteira</option>
                                         <option value="Casado" >Casado</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="nascimento" class="">Data de nascimento</label>
-                                    <input type="date" class="form-control"   name="nascimento" class="form-control">
+                                    <input type="date" class="form-control" id="nascimento"  name="nascimento">
                                 </div>
+
                                 <div class="form-group col-md-3">
                                     <label for="provincia" class="">Província</label>
                                     <select  id="provincia" class="form-control" name="provincia">
                                         <option value="Benguela">Benguela</option>
                                     </select>
                                 </div>
+
                                 <div class="form-group col-md-3">
                                     <label for="municipio" class="">Município</label>
                                     <select  id="municipio" class="form-control" name="municipio">
@@ -144,11 +143,12 @@ codigo
 
                                 <div class="form-group col-md-3">
                                     <label for="pai" class="">Pai</label>
-                                    <input type="text" name="pai" class="form-control">
+                                    <input type="text" name="pai" id="pai" class="form-control">
                                 </div>
+
                                 <div class="form-group col-md-3">
                                     <label for="mae" class="">Mae</label>
-                                    <input type="text" name="mae" class="form-control">
+                                    <input type="text" name="mae" id="mae" class="form-control">
                                 </div>
 
                             </div>
