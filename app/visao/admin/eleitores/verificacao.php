@@ -2,7 +2,8 @@
 <html dir="ltr" lang="en">
 
 <head>
-    <?php require_once("../components/cabecalho.php")?>
+    <?php require_once("../components/cabecalho.php");
+    require_once "../../../controlador/utilizador/logado.php";?>
     <title>AutaEleja</title>
 
 </head>

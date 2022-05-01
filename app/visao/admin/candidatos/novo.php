@@ -2,7 +2,8 @@
 <html dir="ltr" lang="en">
 
 <head>
-    <?php require_once("../components/cabecalho.php")?>
+    <?php require_once("../components/cabecalho.php");
+    require_once "../../../controlador/utilizador/logado.php";?>
     <title>AutaEleja</title>
 
 </head>
@@ -70,10 +71,10 @@
                                 <div class="form-group col-md-3">
                                     <label for="fname" class="">BI</label>
 
-                                   
+
 
                                         <input type="text" name="bi" class="form-control" placeholder="Bilhete de identidade" aria-label="Username" aria-describedby="basic-addon1">
-                                   
+
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="nome"  class="">Nome</label>

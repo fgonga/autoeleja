@@ -1,5 +1,9 @@
-<?php require_once("../../../controlador/processo/listar.php")?>
-<?php require_once("../../../controlador/processo/resultados.php")?>
+
+<?php
+require_once("../../../controlador/processo/listar.php");
+require_once("../../../controlador/processo/resultados.php");
+require_once "../../../controlador/utilizador/logado.php";
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 

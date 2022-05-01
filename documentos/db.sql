@@ -13,12 +13,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Copiando estrutura do banco de dados para AutaEleja
-DROP DATABASE IF EXISTS `AutaEleja`;
-CREATE DATABASE IF NOT EXISTS `AutaEleja` /*!40100 DEFAULT CHARACTER SET utf16 */;
-USE `AutaEleja`;
+-- Copiando estrutura do banco de dados para autaeleja
+DROP DATABASE IF EXISTS `autaeleja`;
+CREATE DATABASE IF NOT EXISTS `autaeleja` /*!40100 DEFAULT CHARACTER SET utf16 */;
+USE `autaeleja`;
 
--- Copiando estrutura para tabela AutaEleja.candidato_no_processo
+-- Copiando estrutura para tabela autaeleja.candidato_no_processo
 DROP TABLE IF EXISTS `candidato_no_processo`;
 CREATE TABLE IF NOT EXISTS `candidato_no_processo` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -30,14 +30,11 @@ CREATE TABLE IF NOT EXISTS `candidato_no_processo` (
   KEY `candidato_no_processo_processo_id_foreign` (`processo_id`),
   CONSTRAINT `candidato_no_processo_candidato_id_foreign` FOREIGN KEY (`candidato_id`) REFERENCES `pessoa` (`id`),
   CONSTRAINT `candidato_no_processo_processo_id_foreign` FOREIGN KEY (`processo_id`) REFERENCES `processo` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela AutaEleja.candidato_no_processo: ~0 rows (aproximadamente)
-DELETE FROM `candidato_no_processo`;
-/*!40000 ALTER TABLE `candidato_no_processo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `candidato_no_processo` ENABLE KEYS */;
+-- Exportação de dados foi desmarcado.
 
--- Copiando estrutura para tabela AutaEleja.pessoa
+-- Copiando estrutura para tabela autaeleja.pessoa
 DROP TABLE IF EXISTS `pessoa`;
 CREATE TABLE IF NOT EXISTS `pessoa` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -51,15 +48,17 @@ CREATE TABLE IF NOT EXISTS `pessoa` (
   `municipio` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tipo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telefone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `codigo` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `verificado` tinyint(1) unsigned zerofill DEFAULT 0,
+  `residencia` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pai` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mae` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela AutaEleja.pessoa: ~0 rows (aproximadamente)
-DELETE FROM `pessoa`;
-/*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
+-- Exportação de dados foi desmarcado.
 
--- Copiando estrutura para tabela AutaEleja.processo
+-- Copiando estrutura para tabela autaeleja.processo
 DROP TABLE IF EXISTS `processo`;
 CREATE TABLE IF NOT EXISTS `processo` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -69,14 +68,11 @@ CREATE TABLE IF NOT EXISTS `processo` (
   `municipio` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `nome` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela AutaEleja.processo: ~0 rows (aproximadamente)
-DELETE FROM `processo`;
-/*!40000 ALTER TABLE `processo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `processo` ENABLE KEYS */;
+-- Exportação de dados foi desmarcado.
 
--- Copiando estrutura para tabela AutaEleja.utilizador
+-- Copiando estrutura para tabela autaeleja.utilizador
 DROP TABLE IF EXISTS `utilizador`;
 CREATE TABLE IF NOT EXISTS `utilizador` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -84,14 +80,11 @@ CREATE TABLE IF NOT EXISTS `utilizador` (
   `senha` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tipo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela AutaEleja.utilizador: ~0 rows (aproximadamente)
-DELETE FROM `utilizador`;
-/*!40000 ALTER TABLE `utilizador` DISABLE KEYS */;
-/*!40000 ALTER TABLE `utilizador` ENABLE KEYS */;
+-- Exportação de dados foi desmarcado.
 
--- Copiando estrutura para tabela AutaEleja.voto
+-- Copiando estrutura para tabela autaeleja.voto
 DROP TABLE IF EXISTS `voto`;
 CREATE TABLE IF NOT EXISTS `voto` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -103,12 +96,9 @@ CREATE TABLE IF NOT EXISTS `voto` (
   KEY `voto_processo_id_foreign` (`processo_id`),
   CONSTRAINT `voto_candidato_no_processo_id_foreign` FOREIGN KEY (`candidato_no_processo_id`) REFERENCES `candidato_no_processo` (`id`),
   CONSTRAINT `voto_processo_id_foreign` FOREIGN KEY (`processo_id`) REFERENCES `processo` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela AutaEleja.voto: ~0 rows (aproximadamente)
-DELETE FROM `voto`;
-/*!40000 ALTER TABLE `voto` DISABLE KEYS */;
-/*!40000 ALTER TABLE `voto` ENABLE KEYS */;
+-- Exportação de dados foi desmarcado.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

@@ -1,5 +1,8 @@
 <?php
-require_once("../../controlador/resumo/index.php")?>
+require_once("../../controlador/resumo/index.php");
+require_once "../../controlador/utilizador/logado.php";
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 

@@ -1,6 +1,8 @@
 
 
-<?php require_once("../../../controlador/candidato/listar.php")?>
+<?php require_once("../../../controlador/candidato/listar.php");
+require_once "../../../controlador/utilizador/logado.php";?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
