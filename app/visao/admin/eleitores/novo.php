@@ -47,7 +47,7 @@
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="card">
-                    <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="/app/controlador/eleitores/novo.php">
+                    <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="/app/controlador/eleitor/novo.php">
                         <div class="card-body">
                             <h5 class="card-title">Informações do eleitor</h5>
                             <hr>
@@ -65,16 +65,15 @@
                                  $mensagem
                                  </div>";
                                 }
-
                                 ?>
                             </div>
 
                             <div class="row">
                                 <div class="form-group col-md-3">
-                                    <label for="fname" class="">BI</label>
+                                    <label for="fname">BI</label>
 
                                     <div class="input-group">
-                                        <input type="text" name="bi" id="bi" class="form-control " placeholder="Bilhete de identidade" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input autofocus required type="text" name="bi" id="bi" class="form-control " placeholder="Bilhete de identidade" aria-label="Username" aria-describedby="basic-addon1">
                                         <div class="input-group-prepend">
                                             <span  class="input-group-text btn procurar_bi" title="Buscar informações" id="basic-addon1">
                                                 <div class="loader bi_loader" role="status"></div>
@@ -84,71 +83,66 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <label for="fname" class="">Telefone</label>
-                                    <input type="hidden" id="codigo" value="<?php echo random_int(5,5);?>">
+                                    <label for="fname">Telefone</label>
+
                                     <div class="input-group">
-                                        <input  type="text" id="numero" class="form-control" placeholder="9xx xxx xxx" aria-label="Username" aria-describedby="basic-addon1">
-                                        <div class="input-group-prepend" title="Enviar codigo de confirmação">
-                                            <span class="input-group-text btn enviar_codigo" id="basic-addon1"><i class="fa fa-paper-plane fa-fw"></i> Enviar</span>
-                                        </div>
+                                        <input   type="text" name="telefone" id="numero" class="form-control" placeholder="9xx xxx xxx" aria-label="Username" aria-describedby="basic-addon1">
+
                                     </div>
 
                                 </div>
+
                                 <div class="form-group col-md-3">
-                                    <label for="fname" class="">Código de aprovação</label>
-                                    <input type="number" class="form-control" id="lname" placeholder="Código">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="nome"  class="">Nome</label>
-                                    <input type="text" id="nome" name="nome" class="form-control">
+                                    <label for="nome" >Nome</label>
+                                    <input required type="text"  id="nome" name="nome" class="form-control">
                                 </div>
 
                                 <div class="form-group col-md-3">
                                     <label for="residencia" >Residência</label>
-                                    <input type="text" name="residencia" class="form-control">
+                                    <input required id="residencia" type="text"  name="residencia" class="form-control">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="genero" >Género</label>
-                                    <select name="genero" id="genero" class="form-control">
+                                    <select  required name="genero" id="genero" class="form-control">
                                         <option value="Masculino"  selected>Masculino</option>
                                         <option value="Femenino" >Feminino</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="estado_civil" >Estado civil</label>
-                                    <select name="estado_civil" id="estado_civil" class="form-control">
+                                    <select  required name="estado_civil" id="estado_civil" class="form-control">
                                         <option value="Solteiro" selected>Solteiro</option>
                                         <option value="Solteira">Solteira</option>
                                         <option value="Casado" >Casado</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <label for="nascimento" class="">Data de nascimento</label>
-                                    <input type="date" class="form-control" id="nascimento"  name="nascimento">
+                                    <label for="nascimento">Data de nascimento</label>
+                                    <input required type="date" class="form-control" id="nascimento"  name="nascimento">
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label for="provincia" class="">Província</label>
-                                    <select  id="provincia" class="form-control" name="provincia">
+                                    <label for="provincia">Província</label>
+                                    <select  required  id="provincia" class="form-control" name="provincia">
                                         <option value="Benguela">Benguela</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label for="municipio" class="">Município</label>
-                                    <select  id="municipio" class="form-control" name="municipio">
+                                    <label for="municipio">Município</label>
+                                    <select  required  id="municipio" class="form-control" name="municipio">
                                         <option value="Lobito">Lobito</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label for="pai" class="">Pai</label>
-                                    <input type="text" name="pai" id="pai" class="form-control">
+                                    <label for="pai">Pai</label>
+                                    <input required type="text" name="pai" id="pai" class="form-control">
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label for="mae" class="">Mae</label>
-                                    <input type="text" name="mae" id="mae" class="form-control">
+                                    <label for="mae">Mae</label>
+                                    <input required type="text" name="mae" id="mae" class="form-control">
                                 </div>
 
                             </div>

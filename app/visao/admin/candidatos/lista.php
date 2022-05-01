@@ -83,7 +83,7 @@
                                   <tr>
                                       <td><?php echo $candidato["id"];?></td>
                                       <td><?php echo $candidato["nome"];?></td>
-                                      <td><?php echo $candidato["telefone"];?></td>
+                                      <td><?php echo $candidato["bi"];?></td>
                                       <td><?php echo $candidato["genero"]?></td>
                                       <td><?php echo $candidato["nascimento"]?></td>
                                       <td><?php echo $candidato["telefone"]?></td>

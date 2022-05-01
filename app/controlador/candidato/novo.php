@@ -14,23 +14,25 @@ $telefone = $_POST['telefone'];
 //verificar se enviou uma foto
 
 if(!empty($_FILES["foto"]["tmp_name"])){
-	$formato = pathinfo($_FILES['foto']["name"], PATHINFO_EXTENSION);
-	$nome_do_arquivo = uniqid().".$formato";
-	if (move_uploaded_file($_FILES["foto"]["tmp_name"], "../../../publico/candidatos/".$nome_do_arquivo)) {
-		$foto = $nome_do_arquivo;
-	}else{
-		$foto = "padrao.jpg";
-	}
+    $formato = pathinfo($_FILES['foto']["name"], PATHINFO_EXTENSION);
+    $nome_do_arquivo = uniqid().".$formato";
+    if (move_uploaded_file($_FILES["foto"]["tmp_name"], "../../../publico/candidatos/".$nome_do_arquivo)) {
+        $foto = $nome_do_arquivo;
+    }else{
+        $foto = "padrao.jpg";
+    }
 }else{
-	$foto = "padrao.jpg";
+    $foto = "padrao.jpg";
 };
 
 $query = "INSERT INTO pessoa (nome, bi, foto, genero, estado_civil, nascimento, provincia, municipio,tipo,telefone) VALUES ('$nome', '$bi', '$foto', '$genero', '$estado_civil', '$nascimento', '$provincia', '$municipio','c','$telefone')";
 
 if (mysqli_query($conexao,$query)) {
-	header('location: /app/visao/admin/candidatos/novo.php?erro=nao&mensagem=Candidato cadastrado com sucesso');
+    mysqli_close($conexao);
+    header('location: /app/visao/admin/candidatos/novo.php?erro=nao&mensagem=Candidato cadastrado com sucesso');
 } else{
-	header('location: /app/visao/admin/candidatos/novo.php?erro=sim&mensagem=Não foi possível cadastrar');	
+    mysqli_close($conexao);
+    header('location: /app/visao/admin/candidatos/novo.php?erro=sim&mensagem=Não foi possível cadastrar');
 };
 
 

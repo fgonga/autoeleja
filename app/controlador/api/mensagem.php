@@ -35,7 +35,8 @@ function enviar_mensagem(string $numero,$mensagem){
 
 }
 
+if (!empty($_GET['numero']) and !empty($_GET['mensagem'])){
+    echo enviar_mensagem($_GET['numero'],$_GET['mensagem']);
+}
 
-
-echo enviar_mensagem($_GET['numero'],$_GET['mensagem']);
 

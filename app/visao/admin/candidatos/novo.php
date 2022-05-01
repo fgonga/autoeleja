@@ -70,13 +70,10 @@
                                 <div class="form-group col-md-3">
                                     <label for="fname" class="">BI</label>
 
-                                    <div class="input-group">
+                                   
 
                                         <input type="text" name="bi" class="form-control" placeholder="Bilhete de identidade" aria-label="Username" aria-describedby="basic-addon1">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="nome"  class="">Nome</label>

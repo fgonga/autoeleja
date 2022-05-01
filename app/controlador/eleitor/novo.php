@@ -1,36 +1,41 @@
 <?php
 require_once "../../modelo/Conexao.php";
+require_once "../../controlador/api/mensagem.php";
+$codigo = null;
+$telefone = $_REQUEST['telefone'];
 
-$nome = $_POST['nome'];
-$bi = $_POST['bi'];
-$foto = $_POST['foto'];
-$genero = $_POST['genero'];
-$estado_civil = $_POST['estado_civil'];
-$nascimento = $_POST['nascimento'];
-$provincia = $_POST['provincia'];
-$municipio = $_POST['municipio'];
-$telefone = $_POST['telefone'];
-
-//verificar se enviou uma foto
-
-if(!empty($_FILES["foto"]["tmp_name"])){
-    $formato = pathinfo($_FILES['foto']["name"], PATHINFO_EXTENSION);
-    $nome_do_arquivo = uniqid().".$formato";
-    if (move_uploaded_file($_FILES["foto"]["tmp_name"], "../../../publico/eleitor/".$nome_do_arquivo)) {
-        $foto = $nome_do_arquivo;
-    }else{
-        $foto = "padrao.jpg";
-    }
+if (!empty($telefone) and strlen($telefone) != 9){
+    header('location: /app/visao/admin/eleitores/novo.php?erro=sim&mensagem=Telefone incorrecto');
 }else{
-    $foto = "padrao.jpg";
-};
+    $codigo = random_int(100, 999).random_int(100,999);
+}
 
-$query = "INSERT INTO pessoa (nome, bi, foto, genero, estado_civil, nascimento, provincia, municipio,tipo,telefone) VALUES ('$nome', '$bi', '$foto', '$genero', '$estado_civil', '$nascimento', '$provincia', '$municipio','c','$telefone')";
+$nome = $_REQUEST['nome'];
+$bi = $_REQUEST['bi'];
+$genero = $_REQUEST['genero'];
+$estado_civil = $_REQUEST['estado_civil'];
+$nascimento = $_REQUEST['nascimento'];
+$provincia = $_REQUEST['provincia'];
+$municipio = $_REQUEST['municipio'];
+$residencia = $_REQUEST['residencia'];
+$pai = $_REQUEST['pai'];
+$mae = $_REQUEST['mae'];
+
+
+
+$query = "INSERT INTO pessoa (telefone,codigo,verificado,tipo,nome, bi, genero, estado_civil, nascimento, provincia, municipio, residencia, pai, mae) VALUES ('$telefone','$codigo',0,'e','$nome', '$bi', '$genero', '$estado_civil', '$nascimento', '$provincia', '$municipio', '$residencia', '$pai', '$mae')";
 
 if (mysqli_query($conexao,$query)) {
-    header('location: /app/visao/admin/candidatos/novo.php?erro=nao&mensagem=Candidato cadastrado com sucesso');
+    mysqli_close($conexao);
+    if (!empty($telefone)){
+        enviar_mensagem($telefone,"Codido de verificação: ".$codigo);
+        header("location: /app/visao/admin/eleitores/verificacao.php?telefone=$telefone");
+        return 0;
+    }
+    header('location: /app/visao/admin/eleitores/novo.php?erro=nao&mensagem=Eleitor cadastrado com sucesso');
 } else{
-    header('location: /app/visao/admin/candidatos/novo.php?erro=sim&mensagem=Não foi possível cadastrar');
+    mysqli_close($conexao);
+    header('location: /app/visao/admin/eleitores/novo.php?erro=sim&mensagem=Não foi possível cadastrar');
 };
 
 

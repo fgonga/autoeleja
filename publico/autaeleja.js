@@ -9,6 +9,9 @@ function toTitleCase(str) {
 
 $(".bi_loader").hide();
 $(".bi_icon").show();
+
+$(".sms_loader").hide();
+$(".sms_icon").show();
 $(".procurar_bi").on("click", function() {
     const value = $("#bi").val().toUpperCase();
     $(".bi_loader").show();
@@ -22,8 +25,14 @@ $(".procurar_bi").on("click", function() {
             $(".bi_icon").show();
             let dados = JSON.parse(data);
             if (!dados.sucesso){
+                if (dados.erro.mensagem == 'Runtime Error'){
+                    $("#mensagem").html(` <div class='alert alert-danger' role='alert'>
+                    Serviço de consulta temporariamente indisponível, por favor tente mais tarde.
+                                 </div>`);
+                    return ;
+                }
                 $("#mensagem").html(` <div class='alert alert-danger' role='alert'>
-                                 ${dados.erro.mensagem}
+                              Serviço de consulta temporariamente indisponível, por favor tente mais tarde.
                                  </div>`);
             }else{
 
@@ -45,19 +54,34 @@ $(".procurar_bi").on("click", function() {
 
 $(".enviar_codigo").on("click", function() {
     const numero = $("#numero").val().toUpperCase();
-    const codigo = $("#codigo").val().toUpperCase();
-    $.ajax({
-        url: '/app/controlador/api/mensagem.php',
-        type: 'GET',
-        data: {numero: numero,mensagem:`Codigo de verificação: ${codigo}`},
-        success: function(data){
-            let dados = JSON.parse(data);
-            if (!dados.sucesso){
-                $("#mensagem").html(` <div class='alert alert-danger' role='alert'>
+    $(".sms_loader").show();
+    $(".sms_icon").hide();
+    if (numero.length === 9){
+        const codigo = $("#codigo").val().toUpperCase();
+        $.ajax({
+            url: '/app/controlador/api/mensagem.php',
+            type: 'GET',
+            data: {numero: numero,mensagem:`Codigo de verificação: ${codigo}`},
+            success: function(data){
+                $(".sms_loader").hide();
+                $(".sms_icon").show();
+                let dados = JSON.parse(data);
+                let mensagem =  $("#mensagem");
+                if (!dados.sucesso){
+                    mensagem.html(` <div class='alert alert-danger' role='alert'>
                                  ${dados.erro.mensagem}
                                  </div>`);
+                    return;
+                }
+                mensagem.html(` <div class='alert alert-success' role='alert'>
+                               Mensagem enviada com sucesso.
+                                 </div>`);
             }
-        }
-    });
+        });
+        return;
+    }
+    $("#mensagem").html(` <div class='alert alert-danger' role='alert'>
+                              Numero incorrecto
+                                 </div>`);
 });
 

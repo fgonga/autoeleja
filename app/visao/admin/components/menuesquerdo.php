@@ -28,6 +28,7 @@
                     <ul aria-expanded="false" class="collapse  first-level">
                         <li class="sidebar-item"><a href="/app/visao/admin/eleitores/novo.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Novo eleitor </span></a></li>
                         <li class="sidebar-item"><a href="/app/visao/admin/eleitores/lista.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Lista de eleitores </span></a></li>
+                        <li class="sidebar-item"><a href="/app/visao/admin/eleitores/verificacao.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Verificar telefone </span></a></li>
                     </ul>
                 </li>
 

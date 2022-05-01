@@ -1,6 +1,6 @@
 
 
-<?php require_once("../../../controlador/candidato/listar.php")?>
+<?php require_once("../../../controlador/eleitor/listar.php")?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -34,7 +34,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Lista de candidatos</h4>
+                        <h4 class="page-title">Lista de eleitors</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -65,7 +65,7 @@
                        }
 
                        ?>
-                       <input type="text" class="form-control mb-2" placeholder="Pesquisar candidato">
+                       <input type="text" class="form-control mb-2" placeholder="Pesquisar eleitor">
                        <table class="table table-bordered">
                           <thead>
                               <tr class="bg-primary">
@@ -75,24 +75,30 @@
                                   <th scope="col" class="text-white">Genero</th>
                                   <th scope="col" class="text-white">Data de nascimento</th>
                                   <th scope="col" class="text-white">Telefone</th>
+                                  <th scope="col" class="text-white">T Verificado</th>
                                   <th scope="col" class="text-white">Ações</th>
                               </tr>
                           </thead>
                           <tbody>
-                              <?php while($candidato = mysqli_fetch_array($candidatos)):?>
+                              <?php while($eleitor = mysqli_fetch_array($eleitores)):?>
                                   <tr>
-                                      <td><?php echo $candidato["id"];?></td>
-                                      <td><?php echo $candidato["nome"];?></td>
-                                      <td><?php echo $candidato["telefone"];?></td>
-                                      <td><?php echo $candidato["genero"]?></td>
-                                      <td><?php echo $candidato["nascimento"]?></td>
-                                      <td><?php echo $candidato["telefone"]?></td>
+                                      <td><?php echo $eleitor["id"];?></td>
+                                      <td><?php echo $eleitor["nome"];?></td>
+                                      <td><?php echo $eleitor["bi"];?></td>
+                                      <td><?php echo $eleitor["genero"]?></td>
+                                      <td><?php echo $eleitor["nascimento"]?></td>
+                                      <td><?php echo $eleitor["telefone"]?></td>
+                                      <td><?php echo $eleitor["verificado"] == 0 ?'<a href="/app/visao/admin/eleitores/verificacao.php?telefone='.$eleitor["telefone"].'" class="btn btn-primary btn-sm">
+                                              <i class="fa fa-check"></i> Verificar
+                                          </a>' : 'Verificado';  ?></td>
 
                                       <td>
+
                                           <button class="btn btn-primary btn-sm">
                                               <i class="fa fa-edit"></i> Editar
                                           </button>
-                                          <a href="/app/controlador/candidato/eliminar.php?id=<?php echo $candidato['id']?>" class="btn btn-danger btn-sm">
+
+                                          <a href="/app/controlador/eleitor/eliminar.php?id=<?php echo $eleitor['id']?>" class="btn btn-danger btn-sm">
                                               <i class="fa fa-trash"></i> Eliminar
                                           </a>
                                       </td>
