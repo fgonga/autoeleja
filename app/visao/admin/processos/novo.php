@@ -86,15 +86,33 @@ require_once "../../../controlador/utilizador/logado.php";
 
                                 <div class="form-group col-md-3">
                                     <label for="lname" class="">Província</label>
-                                    <select required name="provincia" id="" class="form-control">
+                                    <select required name="provincia" id="provincia_input" class="form-control">
+                                        <option value="" disabled selected>Selecione uma provincia</option>
                                         <option value="Benguela">Benguela</option>
+                                        <option value="Bie">Bie</option>
+                                        <option value="Cabinda">Cabinda</option>
+                                        <option value="Cuando Cubango">Cuando Cubango</option>
+                                        <option value="Cuanza-Norte">Cuanza-Norte</option>
+                                        <option value="Cuanza-Sul">Cuanza-Sul</option>
+                                        <option value="Cunene">Cunene</option>
+                                        <option value="Huambo">Huambo</option>
+                                        <option value="Huila">Huila</option>
+                                        <option value="Luanda">Luanda</option>
+                                        <option value="Luanda-Norte">Luanda-Norte</option>
+                                        <option value="Luanda-Sul">Luanda-Sul</option>
+                                        <option value="Malange">Malange</option>
+                                        <option value="Moxico">Moxico</option>
+                                        <option value="Namibe">Namibe</option>
+                                        <option value="Uige">Uige</option>
+                                        <option value="Zaire">Zaire</option>
+
                                     </select>
                                 </div>
 
                                 <div class="form-group col-md-3">
                                     <label for="email1" class="">Município</label>
-                                    <select required name="municipio" id="" class="form-control">
-                                        <option value="Lobito">Lobito</option>
+                                    <select id="municipios_input" required name="municipio" class="form-control">
+                                        <option value="" disabled selected>Selecione um municipio</option>
                                     </select>
 
                                 </div>

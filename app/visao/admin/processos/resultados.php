@@ -54,7 +54,8 @@ require_once "../../../controlador/utilizador/logado.php";
                             <div class="form-group col-md-3">
                                 <select name="id" class="form-control" >
                                     <?php while($processo = mysqli_fetch_array($processos)):?>
-                                        <option <?php echo $processo["id"] == $_GET["id"] ? "selected":""; ?> value="<?php echo $processo["id"]?>"><?php echo $processo["nome"]?></option>
+                                        <option selected>Selecionar processo</option>
+                                        <option <?php echo $processo["id"] == @$_GET["id"] ? "selected":""; ?> value="<?php echo $processo["id"]?>"><?php echo $processo["nome"]?></option>
                                     <?php endwhile;?>
                                 </select>
                             </div>
@@ -71,17 +72,19 @@ require_once "../../../controlador/utilizador/logado.php";
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($candidatos as $index => $candidato):?>
-                            <tr>
+                        <?php if(@$candidatos):?>
+                            <?php foreach ($candidatos as $index => $candidato):?>
+                                <tr>
 
-                                <td><?php echo $candidato["nome"];?></td>
-                                <td><?php echo $candidato["votos"];?></td>
+                                    <td><?php echo $candidato["nome"];?></td>
+                                    <td><?php echo $candidato["votos"];?></td>
 
-                                <td><label for="" class="badge <?php echo $bads[$index];?> "><?php echo $index+1;?> - Lugar</label>
-                                </td>
+                                    <td><label for="" class="badge <?php echo $bads[$index];?> "><?php echo $index+1;?> - Lugar</label>
+                                    </td>
 
-                            </tr>
-                        <?php endforeach;?>
+                                </tr>
+                            <?php endforeach;?>
+                        <?php endif;?>
                         </tbody>
                     </table>
 

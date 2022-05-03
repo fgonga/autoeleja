@@ -2,7 +2,7 @@
 require_once "../../../modelo/Conexao.php";
 require_once "../../../funcoes/funcoes.php";
 
-if ($_GET['id']){
+if (@$_GET['id']){
     $processo_id = $_GET['id'];
     $processo = mysqli_query($conexao, "SELECT * FROM voto where id = $processo_id");
 

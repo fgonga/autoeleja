@@ -87,13 +87,6 @@ $(".enviar_codigo").on("click", function() {
 
 $("#provincia_input").ready(function() {
 
-
-    function producarProvincia(nome) {
-        console.log(nome);
-
-    }
-
-
     $( "#provincia_input" ).change(function() {
         for (let index in provincias){
 
@@ -374,6 +367,7 @@ $("#escolher").click(function (el) {
         alert("Escolha um município");
         return;
     }
+    $("#candidatos").html("<h1>Carregando candidatos....</h1>");
     $.ajax({
         url: '/app/controlador/api/candidadosparavotar.php',
         type: 'GET',
@@ -432,6 +426,8 @@ $("#escolher").click(function (el) {
                      `);
                 }
 
+            }else{
+                $("#candidatos").html("<h1>Nenhum candidato encontrado</h1>");
             }
         }
     });

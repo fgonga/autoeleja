@@ -14,9 +14,10 @@ $telefone = $_POST['telefone'];
 //verificar se enviou uma foto
 
 if(!empty($_FILES["foto"]["tmp_name"])){
+
     $formato = pathinfo($_FILES['foto']["name"], PATHINFO_EXTENSION);
     $nome_do_arquivo = uniqid().".$formato";
-    if (move_uploaded_file($_FILES["foto"]["tmp_name"], "../../../publico/candidatos/".$nome_do_arquivo)) {
+    if (move_uploaded_file($_FILES["foto"]["tmp_name"], "../../../publico/".$nome_do_arquivo)) {
         $foto = $nome_do_arquivo;
     }else{
         $foto = "padrao.webp";
