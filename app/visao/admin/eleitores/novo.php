@@ -55,17 +55,19 @@
                             <div id="mensagem">
                                 <?php
                                 @$mensagem = $_GET['mensagem'];
-                                if (@$_GET['erro'] == 'nao') {
+                                @$erro = $_GET['erro'];
+                                if ( $erro == 'nao') {
                                     echo "
                                     <div class='alert alert-success' role='alert'>
                                     $mensagem
                                     </div>";
-                                }elseif(@$_GET['erro'] == 'sim'){
+                                }elseif( $erro == 'sim'){
                                     echo "
                                  <div class='alert alert-danger' role='alert'>
                                  $mensagem
                                  </div>";
                                 }
+
                                 ?>
                             </div>
 

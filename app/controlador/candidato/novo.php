@@ -19,10 +19,10 @@ if(!empty($_FILES["foto"]["tmp_name"])){
     if (move_uploaded_file($_FILES["foto"]["tmp_name"], "../../../publico/candidatos/".$nome_do_arquivo)) {
         $foto = $nome_do_arquivo;
     }else{
-        $foto = "padrao.jpg";
+        $foto = "padrao.webp";
     }
 }else{
-    $foto = "padrao.jpg";
+    $foto = "padrao.webp";
 };
 
 $query = "INSERT INTO pessoa (nome, bi, foto, genero, estado_civil, nascimento, provincia, municipio,tipo,telefone) VALUES ('$nome', '$bi', '$foto', '$genero', '$estado_civil', '$nascimento', '$provincia', '$municipio','c','$telefone')";

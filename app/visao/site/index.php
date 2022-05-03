@@ -171,48 +171,72 @@
     </div>
 </section>
 
-<section id="quickfeatures" class="dtr-py-6">
+<section id="votar" class="dtr-py-6">
     <div class="container">
         <h3>Votar</h3>
+        <div class="row">
 
             <div class="form-group col-12 d-flex justify-content-center">
-                <select name="" id="" class="form-control col-3  mr-2">
-                    <option value="#" disabled >Província</option>
-                    <option value="Bengo">Bengo</option>
-                    <option value="Benguela" selected>Benguela</option>
-                    <option value="Bié">Bié</option>
+                <select id="provincia_input" name="provincia" class="form-control col-3  mr-2">
+                    <option value="" disabled selected>Selecione uma provincia</option>
+                    <option value="Benguela">Benguela</option>
+                    <option value="Bie">Bie</option>
                     <option value="Cabinda">Cabinda</option>
-                    <option value="Cuando-Cubango">Cuando-Cubango</option>
+                    <option value="Cuando Cubango">Cuando Cubango</option>
                     <option value="Cuanza-Norte">Cuanza-Norte</option>
                     <option value="Cuanza-Sul">Cuanza-Sul</option>
                     <option value="Cunene">Cunene</option>
                     <option value="Huambo">Huambo</option>
-                    <option value="Huíla">Huíla</option>
+                    <option value="Huila">Huila</option>
                     <option value="Luanda">Luanda</option>
-                    <option value="Lunda-Norte">Lunda-Norte</option>
-                    <option value="Lunda-Sul">Lunda-Sul</option>
-                    <option value="Malanje">Malanje</option>
+                    <option value="Luanda-Norte">Luanda-Norte</option>
+                    <option value="Luanda-Sul">Luanda-Sul</option>
+                    <option value="Malange">Malange</option>
                     <option value="Moxico">Moxico</option>
                     <option value="Namibe">Namibe</option>
-                    <option value="Uíge">Uíge</option>
+                    <option value="Uige">Uige</option>
                     <option value="Zaire">Zaire</option>
+
+
+
                 </select>
-                <select name="" id="" class="form-control  col-3 ">
-                    <option value="#" disabled selected>Município</option>
-                    <option value="Balombo">Balombo</option>
-                    <option value="Bocoio">Bocoio</option>
-                    <option value="Caimbambo">Caimbambo</option>
-                    <option value="Catumbela">Catumbela</option>
-                    <option value="Ganda">Ganda</option>
-                    <option value="Chongoroi">Chongoroi</option>
-                    <option value="Lobito" selected>Lobito</option>
-                    <option value="">Cunene</option>
-                    <option value="">Huambo</option>
-                    <option value="">Huíla</option>
+                <select id="municipios_input" name="municipio" class="form-control  col-3 ">
+                    <option value="" disabled selected>Selecione um municipio</option>
+
                 </select>
-                <button class="btn btn-primary">Escolher candidatos</button>
+
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <button class="btn btn-primary" id="escolher">Escolher candidatos</button>
             </div>
 
+        </div>
+        <div>
+            <div class="d-flex justify-content-center" id="candidatos">
+
+
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
@@ -236,10 +260,10 @@
             <!-- column 2 ends -->
             <!-- column 3 starts -->
             <div class="col-12 col-lg-4  wow fadeInUp" data-wow-delay="0.4s">
-                <div class="dtr-btn"> <a href="mailto:pesquisapsd2020@gmail.com">Contacte-nos<span><i class="icon-envelope" aria-hidden="true"></i></span> </a> </div><br>
+                <div class="dtr-btn"> <a href="mailto:comercial@autaeleja.ao">Contacte-nos<span><i class="icon-envelope" aria-hidden="true"></i></span> </a> </div><br>
                 <ul class="list-unstyled mt-2">
-                    <li><a href="tel:+244 927 208 899"><i class="icon-phone"></i> +244 927 208 899</a></li>
-                    <li><a href="mailto:pesquisapsd2020@gmail.com"><i class="icon-envelope"></i> pesquisapsd2020@gmail.com</a></li>
+                    <li><a href="tel:+244 990 000 000"><i class="icon-phone"></i> +244 990 000 000</a></li>
+                    <li><a href="mailto:comercial@autaeleja.ao"><i class="icon-envelope"></i> comercial@autaeleja.ao</a></li>
                     <li></li>
                 </ul>
             </div>

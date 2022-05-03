@@ -47,7 +47,7 @@
                     <ul class="dtr-scrollspy navbar-nav ml-auto">
                         <li class="nav-item" > <a class="nav-link" href="/home" style="color:#142752" >Início</a> </li>
                         <li class="nav-item"> <a class="nav-link"  href="#about" style="color:#142752" >Sobre</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#cta" style="color:#142752" >Resultados</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#resultados" style="color:#142752" >Resultados</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/app/visao/entrar.php" style="color:#142752" >Entrar</a> </li>
 
 
@@ -55,7 +55,7 @@
                 </div>
                 <button class="dtr-btn" >
 
-                    <a href="/app/visao/entrar.php">Votar
+                    <a href="#votar">Votar
                         <span>
 								<i class="fa fa-user" aria-hidden="true"></i>
 							</span>

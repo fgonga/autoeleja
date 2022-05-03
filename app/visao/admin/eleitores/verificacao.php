@@ -39,19 +39,21 @@
                             <div id="mensagem">
 
                                 <?php
-                                @$mensagem = $_GET['mensagem'];
-                                if (@$_GET['erro'] == 'nao') {
-                                    echo "
+                    @$mensagem = $_GET['mensagem'];
+                    @$erro = $_GET['erro'];
+                    if ( $erro == 'nao') {
+                        echo "
                                     <div class='alert alert-success' role='alert'>
                                     $mensagem
                                     </div>";
-                                }elseif(@$_GET['erro'] == 'sim'){
-                                    echo "
+                    }elseif( $erro == 'sim'){
+                        echo "
                                  <div class='alert alert-danger' role='alert'>
                                  $mensagem
                                  </div>";
-                                }
-                                ?>
+                    }
+
+                    ?>
                             </div>
                         </div>
                         <div class="col-md-12"> <h5 class="card-title text-center">Verificar telefone <br></h5></div>

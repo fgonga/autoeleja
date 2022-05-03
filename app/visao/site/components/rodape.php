@@ -46,6 +46,7 @@
 <script src="/publico/site/js/jquery.form.js" type="text/javascript"></script>
 <script src="/publico/site/js/wow.min.js" type="text/javascript"></script>
 <script src="/publico/site/js/custom.js" type="text/javascript"></script>
+<script src="/publico/autaeleja.js" type="text/javascript"></script>
 <script>
     new WOW().init();
 </script>

@@ -44,20 +44,19 @@ require_once "../../../controlador/utilizador/logado.php";
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-md-12 my-0">
-
-
                     <?php
-                    $mensagem = $_GET['mensagem'];
-                    if ($_GET['erro'] == 'nao') {
+                    @$mensagem = $_GET['mensagem'];
+                    @$erro = $_GET['erro'];
+                    if ( $erro == 'nao') {
                         echo "
-                            <div class='alert alert-success ' role='alert'>
-                            $mensagem
-                            </div>";
-                    }elseif($_GET['erro'] == 'sim'){
+                                    <div class='alert alert-success' role='alert'>
+                                    $mensagem
+                                    </div>";
+                    }elseif( $erro == 'sim'){
                         echo "
-                           <div class='alert alert-danger ' role='alert'>
-                           $mensagem
-                           </div>";
+                                 <div class='alert alert-danger' role='alert'>
+                                 $mensagem
+                                 </div>";
                     }
 
                     ?>
@@ -102,18 +101,18 @@ require_once "../../../controlador/utilizador/logado.php";
                             </tr>
                             </thead>
                             <tbody>
-                           <?php while($utilizador = mysqli_fetch_array($utilizadores)):?>
-                                  <tr>
-                                      <td><?php echo $utilizador["id"];?></td>
-                                      <td><?php echo $utilizador["nome"];?></td>
-                                      <td><?php echo $utilizador["tipo"] == "a"? "Administrador":"Brigadista" ?></td>
-                                      <td>
-                                          <a href="/app/controlador/utilizador/eliminar.php?id=<?php echo $utilizador['id']?>" class="btn btn-danger btn-xs">
-                                              <i class="fa fa-trash"></i> Eliminar
-                                          </a>
-                                      </td>
-                                  </tr>
-                              <?php endwhile;?>
+                            <?php while($utilizador = mysqli_fetch_array($utilizadores)):?>
+                                <tr>
+                                    <td><?php echo $utilizador["id"];?></td>
+                                    <td><?php echo $utilizador["nome"];?></td>
+                                    <td><?php echo $utilizador["tipo"] == "a"? "Administrador":"Brigadista" ?></td>
+                                    <td>
+                                        <a href="/app/controlador/utilizador/eliminar.php?id=<?php echo $utilizador['id']?>" class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i> Eliminar
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php endwhile;?>
 
                             </tbody>
                         </table>
